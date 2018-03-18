@@ -25,7 +25,7 @@ fun String.toSha256(): String {
      */
     hash.forEach {
         /**
-         * By Bitwise AND with 0*14+1111111111111111 ,
+         * By Bitwise AND with 0*48.1111111111111111 ,
          * Only the last two characters are saved
          */
         val hex = Integer.toHexString(0xff and it.toInt())
