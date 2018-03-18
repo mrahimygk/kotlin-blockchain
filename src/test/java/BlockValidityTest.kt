@@ -7,15 +7,12 @@ import java.util.*
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
-class BlockValidityTest {
-
-    var faker: Faker
+class BlockValidityTest(var faker: Faker = Faker(Locale("fa"))) {
 
     init {
         /**
          * Generating Random Names with Faker
          */
-        faker = Faker(Locale("fa"))
 
     }
 
