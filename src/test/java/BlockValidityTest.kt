@@ -9,13 +9,6 @@ import kotlin.test.assertTrue
 
 class BlockValidityTest(var faker: Faker = Faker(Locale("fa"))) {
 
-    init {
-        /**
-         * Generating Random Names with Faker
-         */
-
-    }
-
     @Before
     fun bef() {
         println("before")
@@ -23,7 +16,7 @@ class BlockValidityTest(var faker: Faker = Faker(Locale("fa"))) {
 
     @Test
     fun testValidity() {
-        var meamChain = BlockChain(mutableListOf())
+        val meamChain = BlockChain(mutableListOf())
 
         /**
          * First element need to be initialized
@@ -48,7 +41,7 @@ class BlockValidityTest(var faker: Faker = Faker(Locale("fa"))) {
 
     @Test
     fun testInvalidity() {
-        var meamChain = BlockChain(mutableListOf())
+        val meamChain = BlockChain(mutableListOf())
 
         /**
          * First element need to be initialized
@@ -68,7 +61,7 @@ class BlockValidityTest(var faker: Faker = Faker(Locale("fa"))) {
         }
 
 
-        var i = Random().nextInt(meamChain.blockList.size)
+        val i = Random().nextInt(meamChain.blockList.size)
         meamChain[i].data[Random().nextInt(meamChain[i].data.size)].amount = Random().nextDouble() * 10
 
 
