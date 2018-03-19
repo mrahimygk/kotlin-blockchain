@@ -7,7 +7,9 @@ import java.util.*
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
-class BlockValidityTest(var faker: Faker = Faker(Locale("fa"))) {
+class BlockValidityTest {
+
+    var faker: Faker = Faker(Locale("fa"))
 
     @Before
     fun bef() {
